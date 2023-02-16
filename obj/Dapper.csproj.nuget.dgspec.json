@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\Dapper\\Dapper.csproj": {}
+    "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\CrudDapper\\CrudDapper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\Dapper\\Dapper.csproj": {
+    "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\CrudDapper\\CrudDapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\Dapper\\Dapper.csproj",
-        "projectName": "Dapper",
-        "projectPath": "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\Dapper\\Dapper.csproj",
+        "projectUniqueName": "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\CrudDapper\\CrudDapper.csproj",
+        "projectName": "CrudDapper",
+        "projectPath": "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\CrudDapper\\CrudDapper.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\Dapper\\obj\\",
+        "outputPath": "C:\\Users\\Administrador\\Documents\\ExtractSpecificsTextsFromXML\\CrudDapper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,13 +1,19 @@
 ﻿using System;
 
-namespace Dapper.Usuario.Domain.Request
+namespace CrudDapper.Usuario.Domain.Request
 {
     public class UsuarioRequest
     {
-        public string Username { get; set; }
+        public Guid Id { get; private set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
         public string Senha { get; set; }
         public string Nivel { get; set; }
-        public DateTime DataUltimoAcesso { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public string StAtivo { get; set; }
+
+        public void GenerateId()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }
