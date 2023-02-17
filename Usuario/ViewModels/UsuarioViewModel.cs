@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace CrudDapper.Usuario.Domain.Response
+namespace CrudDapper.Usuario.ViewModels
 {
-    public class UsuarioResponse
+    public class UsuarioViewModel
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; private set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }

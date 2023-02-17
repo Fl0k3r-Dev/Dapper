@@ -1,5 +1,4 @@
-﻿using CrudDapper.Usuario.Domain.Request;
-using CrudDapper.Usuario.Domain.Response;
+﻿using CrudDapper.Usuario.Models;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
@@ -19,26 +18,26 @@ namespace CrudDapper.Usuario.Repository
             _connStr = configuration.GetConnectionString("SqlConnection");
         }
 
-        public Task<IEnumerable<UsuarioResponse>> GetAll()
+        public Task<IEnumerable<UsuarioModel>> GetAll()
         {
             string sql = @"
                        SELECT id, nome, email, nivel, stAtivo FROM Usuario
                             ";
             using(var conn = new MySqlConnection(_connStr))
             {
-                return conn.QueryFirstOrDefaultAsync<IEnumerable<UsuarioResponse>>(sql);
+                return conn.QueryFirstOrDefaultAsync<IEnumerable<UsuarioModel>>(sql);
             }
         }
 
-        public Task<UsuarioResponse> GetById(Guid id)
+        public Task<UsuarioModel> GetById(Guid id)
         {
             throw new System.NotImplementedException();
         }
 
-        public async Task<bool> Add(UsuarioRequest request)
+        public bool Add(UsuarioModel usuario)
         {
             string sql = @"
-                           INSERT INTO Usuario VALUES(@Id
+                           INSERT INTO Usuario VALUES( @Id
                                                       ,@Name                                                  
                                                       ,@Email       
                                                       ,@Senha     
@@ -47,17 +46,16 @@ namespace CrudDapper.Usuario.Repository
 
             using (var conn = new MySqlConnection(_connStr))
             {
-                request.GenerateId();
-                return await conn.ExecuteAsync(sql, request) > 0;
+                return conn.Execute(sql, usuario) > 0;
             }
         }
 
-        public Task<bool> Update(UsuarioRequest request, Guid id)
+        public bool Update(UsuarioModel usuario, Guid id)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<bool> Delete(Guid id)
+        public bool Delete(Guid id)
         {
             throw new System.NotImplementedException();
         }
